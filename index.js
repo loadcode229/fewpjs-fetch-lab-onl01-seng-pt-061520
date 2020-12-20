@@ -3,7 +3,6 @@ function fetchBooks() {
     .then(resp => resp.json())
     .then(json => renderBooks(json))
 }
-
 function renderBooks(json) {
   const main = document.querySelector('main')
   json.forEach(book => {
@@ -12,7 +11,6 @@ function renderBooks(json) {
     main.appendChild(h2)
   })
 }
-
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks()
 })
